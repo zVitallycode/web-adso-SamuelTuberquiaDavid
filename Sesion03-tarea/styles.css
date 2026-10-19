@@ -1,0 +1,59 @@
+/*
+  PREGUNTAS DE LA TAREA
+ 
+1. ¿Por qué es mejor un solo styles.css que poner los estilos en cada página?
+R: Porque se escribe una sola vez y se reutiliza en las 3 paginas por lo cual no se repite código,
+un cambio por ejemplo el color del letrero se hace en un solo lugar y se ve en todo el
+sitio, el sitio se ve consistente, y el navegador descarga el archivo una vez y lo guarda
+en caché, así las demás páginas cargan más rápido.
+
+2. Si un h2 tiene una regla de etiqueta y otra de clase con colores distintos, ¿cuál gana y por qué?
+R: Gana la de clase, porque tiene mayor especificidad osea una clase pesa más que una etiqueta.
+Ejemplo: "h2 { color: brown }" y ".destacado { color: orange }" -> un <h2 class="destacado">
+se ve naranja. Si dos reglas tuvieran la misma especificidad, ganaría la que está escrita
+más abajo en el archivo.
+*/
+
+
+
+
+:root {
+  --marron: #8a4b26;
+  --marron-oscuro: #5c2f14;
+  --dorado: #e0a35c;
+  --crema: #fdf1dc;
+}
+
+body { font-family: Georgia, serif; margin: 0; background: #fffaf0; color: var(--marron-oscuro); line-height: 1.6; }
+header, footer { background: var(--marron); color: var(--crema); padding: 1rem 2rem; }
+header h1 { margin: 0; }
+main { max-width: 800px; margin: 0 auto; padding: 1.5rem 2rem; }
+img { max-width: 100%; height: auto; }
+
+h2 { color: var(--marron); }
+h2.destacado { color: #b3541e; }
+
+
+nav ul { list-style: none; display: flex; gap: 1.5rem; padding: 0; margin: .5rem 0 0; }
+nav a { color: var(--crema); text-decoration: none; font-weight: bold; padding: .25rem .5rem; border-radius: 4px; }
+nav a:hover { background-color: var(--dorado); color: var(--marron-oscuro); }
+nav a[aria-current="page"] { text-decoration: underline; }
+
+table {
+  border-collapse: collapse;   
+  width: 100%;
+}
+
+caption { font-weight: bold; margin-bottom: .5rem; text-align: left; }
+th, td {
+  border: 1px solid #cccccc;
+  padding: 8px 12px;          
+  text-align: left;
+}
+
+th {
+  background-color: var(--marron);
+  color: #ffffff;
+}
+
+.promo { background: var(--crema); text-align: center; font-weight: bold; }
