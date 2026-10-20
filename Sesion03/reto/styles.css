@@ -1,0 +1,35 @@
+/* config de la letra elegida en fonts google */
+body{
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+/* config del selector descencendiente */
+header h1{
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+}
+/* config del selector de los 2 IDs*/
+
+.perfil{
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.Formacion{
+    font-size: larger;
+    font-style: italic;
+    background-color: #EEC584;
+}
+/* config del selector de etiqueta */
+#habilidades{
+    font-size: larger;
+    font-style: italic;
+    background-color: #CACAAA;
+}
+/* config del selector agrupado */
+h2, h4{
+    font-size: larger;
+    font-family: 'Times New Roman', Times, serif;
+        background-color: #C8AB83;
+}
