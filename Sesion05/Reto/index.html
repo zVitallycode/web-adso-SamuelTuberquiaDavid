@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <h1>Formulario de inscripcion SENA</h1>
+        <form action="#" class="formulario">
+            <fieldset>
+                <legend>Datos Personales</legend>
+                <div class="campo">
+                    <label for="nombre">Nombre Completo</label>
+                    <input type="text" id="nombre" name="nombre" required minlength="3">
+                </div>
+
+                <div class="campo">
+                    <label for="documento">Documento</label>
+                    <input type="text" id="documento" name="documento"  inputmode="numeric" required pattern="[0-9]{6,10}" minlength="6" maxlength="10">
+                </div>
+
+                <div class="campo">
+                    <label for="correo">Correo Electronico</label>
+                    <input type="email" name="correo" id="correo" required>
+                </div>
+
+                <div class="campo">
+                    <label for="telefono">Celular</label>
+                    <input type="tel" name="telefono" id="telefono" required pattern="3[0-9]{9}" maxlength="10" minlength="10">
+                </div>
+
+                <div class="campo">
+                    <label for="nacimiento">Fecha de Nacimiento</label>
+                    <input type="date" name="nacimiento" id="nacimiento" min="1900-01-01">
+                </div>
+
+                <div class="campo">
+                    <label for="clave">Contraseña</label>
+                    <input type="password" name="clave" id="clave" required minlength="8">
+                </div>
+
+                <div class="campo">
+                    <label for="edad">Edad</label>
+                    <input type="number" name="edad" id="edad" min="0" max="120">
+                </div>
+
+            </fieldset>
+            <fieldset>
+                <legend>Programas</legend>
+                <div class="campo">
+                    <label for="tipo">Tipo de Programa</label>
+                    <select name="tipo" id="tipo" required>
+                        <option value="">Elige un Programa</option>
+                        <option value="aprendiz">Analisis y desarollo de software</option>
+                        <option value="instructor">Diseño grafico</option>
+                        <option value="visitante">Produccion audivisual</option>
+                    </select>
+                </div>
+
+                 <fieldset class="grupo">
+                    <legend>Jornada</legend>
+                    <label class="opcion"><input type="radio" name="jornada" value="mañana" checked> Mañana</label>
+                    <label class="opcion"><input type="radio" name="jornada" value="tarde"> Tarde</label>
+                    <label class="opcion"><input type="radio" name="jornada" value="noche">Noche</label>
+
+                    
+                </fieldset>
+                <div class="campo opcion-terminos">
+          <label class="opcion">
+            <input type="checkbox" id="terminos" name="terminos" required> Autorizo el tratamiento de datos personales
+          </label>
+          <small id="error-terminos" class="error"></small>
+        </div>
+            </fieldset>
+            
+            <button type="submit" class="boton">Registrarme</button>
+        </form>
+    </main>
+</body>
+</html>
