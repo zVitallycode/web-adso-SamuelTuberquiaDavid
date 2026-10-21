@@ -1,0 +1,41 @@
+/*
+  Diferencia entre Padding y Margin:
+  - Padding (Espaciado interno): Es la distancia desde el contenido de un elemento hacia sus propios bordes. Agranda el espacio interior dentro de la caja.
+  - Margin (Espaciado externo): Es la distancia desde el borde exterior de un elemento hacia los demás elementos que lo rodean. Sirve para separar un bloque de otro.
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 2rem;
+    background-color: #f4f4f9;
+    text-align: center;
+}
+
+.portafolio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.tarjeta {
+    padding: 1.5rem;          /* Espacio interno dentro de la caja */
+    margin: 0.5rem;           /* Espacio externo entre cajas */
+    border-radius: 12px;      /* Bordes redondeados */
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.tarjeta a {
+    color: #2e7d00;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.tarjeta a:hover {
+    text-decoration: underline;
+}
