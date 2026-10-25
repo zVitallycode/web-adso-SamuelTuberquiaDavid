@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | El Trigal del Barrio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="formulario.css">
+</head>
+<body>
+  <header>
+    <h1>El Trigal del Barrio</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="contacto.html" aria-current="page">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h2>Visítanos</h2>
+    <p><strong>Dirección:</strong> Calle 10 # 5-23, Barrio Centro</p>
+    <h2>Horario</h2>
+    <ul>
+      <li>Lunes a sábado: 6:00 a.m. &ndash; 8:00 p.m.</li>
+      <li>Domingos y festivos: 7:00 a.m. &ndash; 2:00 p.m.</li>
+    </ul>
+    <h2>Pedidos</h2>
+    <p><a href="https://wa.me/573001234567?text=Hola%2C%20quiero%20hacer%20un%20pedido" target="_blank" rel="noopener noreferrer">Escríbenos por WhatsApp</a></p>
+
+    <h2>Escríbenos</h2>
+    <p class="nota">Los campos marcados con <span class="req" aria-hidden="true">*</span> son obligatorios.</p>
+
+    <!--
+      Para qué sirve el atributo "name":
+      Es el nombre con el que el navegador identifica cada dato cuando
+      se envía el formulario. Al enviar, cada campo viaja como un par
+      "name=valor" (por ejemplo correo=ana@mail.com), y así quien recibe
+      los datos sabe a qué campo corresponde cada uno. Un campo sin "name"
+      no se envía. Es distinto del "id", que sirve para enlazar el
+      <label> con su campo y para los estilos o el JavaScript.
+    -->
+    <form action="contacto.html" method="get">
+      <div class="campo">
+        <label for="nombre">Nombre <span class="req" aria-hidden="true">*</span></label>
+        <input type="text" id="nombre" name="nombre" required minlength="2" maxlength="60" autocomplete="name">
+      </div>
+
+      <div class="campo">
+        <label for="correo">Correo electrónico <span class="req" aria-hidden="true">*</span></label>
+        <input type="email" id="correo" name="correo" required autocomplete="email">
+      </div>
+
+      <div class="campo">
+        <label for="celular">Celular (opcional)</label>
+        <input type="tel" id="celular" name="celular" inputmode="numeric" pattern="3[0-9]{9}" maxlength="10" placeholder="3001234567" title="Celular colombiano de 10 dígitos que empiece por 3" autocomplete="tel">
+      </div>
+
+      <div class="campo">
+        <label for="motivo">Motivo <span class="req" aria-hidden="true">*</span></label>
+        <select id="motivo" name="motivo" required>
+          <option value="" selected disabled>Selecciona una opción</option>
+          <option value="pedido">Pedido</option>
+          <option value="pregunta">Pregunta</option>
+          <option value="queja">Queja</option>
+        </select>
+      </div>
+
+      <div class="campo">
+        <label for="mensaje">Mensaje <span class="req" aria-hidden="true">*</span></label>
+        <textarea id="mensaje" name="mensaje" rows="5" required minlength="10" maxlength="500"></textarea>
+      </div>
+
+      <button type="submit">Enviar mensaje</button>
+    </form>
+  </main>
+  <footer>
+    <p>&copy; 2026 El Trigal del Barrio &ndash; Pan fresco todos los días.</p>
+  </footer>
+</body>
+</html>

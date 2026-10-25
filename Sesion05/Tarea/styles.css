@@ -1,0 +1,101 @@
+:root {
+  --marron: #8a4b26;
+  --marron-oscuro: #5c2f14;
+  --dorado: #e0a35c;
+  --crema: #fdf1dc;
+}
+
+body { font-family: Georgia, serif; margin: 0; background: #fffaf0; color: var(--marron-oscuro); line-height: 1.6; }
+header, footer { background: var(--marron); color: var(--crema); padding: 1rem 2rem; }
+header h1 { margin: 0; }
+main { max-width: 800px; margin: 0 auto; padding: 1.5rem 2rem; }
+img { max-width: 100%; height: auto; }
+
+h2 { color: var(--marron); }
+
+h2.destacado { color: #b3541e; }
+
+nav ul { list-style: none; display: flex; gap: 1.5rem; padding: 0; margin: .5rem 0 0; }
+nav a { color: var(--crema); text-decoration: none; font-weight: bold; padding: .25rem .5rem; border-radius: 4px; }
+nav a:hover { background-color: var(--dorado); color: var(--marron-oscuro); }
+nav a[aria-current="page"] { text-decoration: underline; }
+
+table {
+  border-collapse: collapse;   
+  width: 100%;
+}
+caption { font-weight: bold; margin-bottom: .5rem; text-align: left; }
+th, td {
+  border: 1px solid #cccccc;
+  padding: 8px 12px;          
+  text-align: left;
+}
+th {
+  background-color: var(--marron);
+  color: #ffffff;
+}
+.promo { background: var(--crema); text-align: center; font-weight: bold; }
+
+form {
+  max-width: 560px;
+  margin: 1rem 0 2rem;
+  padding: 1.25rem;
+  background: var(--crema);
+  border: 1px solid var(--dorado);
+  border-radius: 8px;
+}
+
+.campo { margin-bottom: 1rem; }
+
+.campo label {
+  display: block;
+  margin-bottom: .3rem;
+  font-weight: bold;
+  color: var(--marron-oscuro);
+}
+
+.req { color: #b3261e; }
+.nota { font-size: .9rem; }
+
+input, select, textarea {
+  width: 100%;
+  padding: .55rem .7rem;
+  font: inherit;
+  color: var(--marron-oscuro);
+  background: #ffffff;
+  border: 1px solid var(--marron);
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+textarea { resize: vertical; }
+
+/* Foco visible */
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--dorado);
+  outline-offset: 2px;
+  border-color: var(--marron-oscuro);
+}
+
+input:user-invalid,
+select:user-invalid,
+textarea:user-invalid {
+  border-color: #b3261e;
+  background: #fff3f2;
+}
+
+button[type="submit"] {
+  padding: .65rem 1.4rem;
+  font: inherit;
+  font-weight: bold;
+  color: var(--crema);
+  background: var(--marron);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover { background: var(--marron-oscuro); }
