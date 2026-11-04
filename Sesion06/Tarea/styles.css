@@ -1,0 +1,124 @@
+/*
+  Diferencia entre justify-content y align-items:
+
+  - justify-content mueve los elementos de lado a lado (horizontal),
+    cuando la fila es normal. Por ejemplo, dejar uno a la izquierda
+    y otro a la derecha.
+
+  - align-items mueve los elementos hacia arriba o hacia abajo (vertical).
+    Por ejemplo, ponerlos en el centro de la altura.
+
+  En el header uso justify-content para separar el nombre del negocio
+  de los enlaces, y align-items para que queden centrados en altura.
+*/
+
+
+body { font-family: Georgia, serif; margin: 0; background: #fffaf0; color: #5c2f14; line-height: 1.6; }
+header, footer { background: #8a4b26; color: #fdf1dc; padding: 1rem 2rem; }
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header h1 { margin: 0; }
+main { max-width: 800px; margin: 0 auto; padding: 1.5rem 2rem; }
+img { max-width: 100%; height: auto; }
+
+h2 { color: #8a4b26; }
+
+h2.destacado { color: #b3541e; }
+
+nav ul { list-style: none; display: flex; gap: 1.5rem; padding: 0; margin: 0; }
+nav a {
+  color: #fdf1dc;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #e0a35c;
+}
+
+
+nav a[aria-current="page"] {
+  text-decoration: underline;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+caption { font-weight: bold; margin-bottom: .5rem; text-align: left; }
+th, td {
+  border: 1px solid #cccccc;
+  padding: 8px 12px;
+  text-align: left;
+}
+th {
+  background-color: #8a4b26;
+  color: #ffffff;
+}
+.promo { background: #fdf1dc; text-align: center; font-weight: bold; }
+
+form {
+  max-width: 560px;
+  margin: 1rem 0 2rem;
+  padding: 1.25rem;
+  background: #fdf1dc;
+  border: 1px solid #e0a35c;
+  border-radius: 8px;
+}
+
+.campo { margin-bottom: 1rem; }
+
+.campo label {
+  display: block;
+  margin-bottom: .3rem;
+  font-weight: bold;
+  color: #5c2f14;
+}
+
+.req { color: #b3261e; }
+.nota { font-size: .9rem; }
+
+input, select, textarea {
+  width: 100%;
+  padding: .55rem .7rem;
+  font: inherit;
+  color: #5c2f14;
+  background: #ffffff;
+  border: 1px solid #8a4b26;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+textarea { resize: vertical; }
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: 3px solid #e0a35c;
+  outline-offset: 2px;
+  border-color: #5c2f14;
+}
+
+input:invalid,
+select:invalid,
+textarea:invalid {
+  border-color: #b3261e;
+  background: #fff3f2;
+}
+
+button[type="submit"] {
+  padding: .65rem 1.4rem;
+  font: inherit;
+  font-weight: bold;
+  color: #fdf1dc;
+  background: #8a4b26;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover { background: #5c2f14; }

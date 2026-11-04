@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="Logotipo de El Trigal del Barrio">
+  <circle cx="60" cy="60" r="58" fill="#fde8d0" stroke="#5c2f14" stroke-width="4"/>
+  <!-- tallo -->
+  <path d="M60 100 L60 38" stroke="#8d5524" stroke-width="4" stroke-linecap="round" fill="none"/>
+  <!-- granos izquierdos -->
+  <g fill="#e0a35c" stroke="#8d5524" stroke-width="2">
+    <ellipse cx="48" cy="44" rx="6" ry="11" transform="rotate(-30 48 44)"/>
+    <ellipse cx="46" cy="60" rx="6" ry="11" transform="rotate(-30 46 60)"/>
+    <ellipse cx="48" cy="76" rx="6" ry="11" transform="rotate(-30 48 76)"/>
+    <!-- granos derechos -->
+    <ellipse cx="72" cy="44" rx="6" ry="11" transform="rotate(30 72 44)"/>
+    <ellipse cx="74" cy="60" rx="6" ry="11" transform="rotate(30 74 60)"/>
+    <ellipse cx="72" cy="76" rx="6" ry="11" transform="rotate(30 72 76)"/>
+    <!-- grano de la punta -->
+    <ellipse cx="60" cy="28" rx="6" ry="12"/>
+  </g>
+  <!-- base de pan -->
+  <path d="M30 100 Q60 86 90 100" stroke="#5c2f14" stroke-width="4" stroke-linecap="round" fill="none"/>
+</svg>
