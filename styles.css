@@ -1,0 +1,66 @@
+/*
+  Diferencia entre Padding y Margin:
+  - Padding (Espaciado interno): Es la distancia desde el contenido de un elemento hacia sus propios bordes. Agranda el espacio interior dentro de la caja.
+  - Margin (Espaciado externo): Es la distancia desde el borde exterior de un elemento hacia los demás elementos que lo rodean. Sirve para separar un bloque de otro.
+*/
+
+:root {
+    --color-fondo: #f4f4f9;
+    --color-tarjeta: #ffffff;
+    --color-borde: #e0e0e0;
+    --color-texto: #222222;
+    --color-enlace: #2e7d00;
+    --sombra-tarjeta: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --espacio-grid: 1.5rem;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 2rem;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    text-align: center;
+}
+
+.portafolio {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--espacio-grid);
+    margin-top: 2rem;
+}
+
+.tarjeta {
+    padding: 1.5rem;          
+    margin: 0;                
+    border-radius: 12px;      
+    background-color: var(--color-tarjeta);
+    border: 1px solid var(--color-borde);
+    box-shadow: var(--sombra-tarjeta);
+}
+
+.tarjeta a {
+    color: var(--color-enlace);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.tarjeta a:hover {
+    text-decoration: underline;
+}
+
+@media (min-width: 600px) {
+    .portafolio {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Computador: 3 columnas */
+@media (min-width: 992px) {
+    .portafolio {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1100px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
