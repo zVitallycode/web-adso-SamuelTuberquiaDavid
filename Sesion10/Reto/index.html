@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi guía de estilos</title>
+  <link rel="stylesheet" href="kit.css">
+</head>
+<body>
+  <main>
+    <h1>🎨 Mi guía de estilos</h1>
+    <p>Kit de piezas reutilizables para mi proyecto final.</p>
+
+    <section>
+      <h2>1. Paleta</h2>
+      <div class="paleta">
+        <div class="muestra">
+          <div class="muestra__color" style="background: var(--color-primario)"></div>
+          <span class="muestra__nombre">--color-primario</span>
+        </div>
+        <div class="muestra">
+          <div class="muestra__color" style="background: var(--color-secundario)"></div>
+          <span class="muestra__nombre">--color-secundario</span>
+        </div>
+        <div class="muestra">
+          <div class="muestra__color" style="background: var(--color-peligro)"></div>
+          <span class="muestra__nombre">--color-peligro</span>
+        </div>
+        <div class="muestra">
+          <div class="muestra__color" style="background: var(--color-exito)"></div>
+          <span class="muestra__nombre">--color-exito</span>
+        </div>
+        <div class="muestra">
+          <div class="muestra__color" style="background: var(--color-aviso)"></div>
+          <span class="muestra__nombre">--color-aviso</span>
+        </div>
+        <div class="muestra">
+          <div class="muestra__color" style="background: var(--color-fondo)"></div>
+          <span class="muestra__nombre">--color-fondo</span>
+        </div>
+        <div class="muestra">
+          <div class="muestra__color" style="background: var(--color-texto)"></div>
+          <span class="muestra__nombre">--color-texto</span>
+        </div>
+        <div class="muestra">
+          <div class="muestra__color" style="background: var(--color-borde)"></div>
+          <span class="muestra__nombre">--color-borde</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>2. Botones</h2>
+      <div class="fila">
+        <button class="btn btn-primario">Principal</button>
+        <button class="btn btn-secundario">Secundario</button>
+        <button class="btn btn-peligro">Peligro</button>
+        <button class="btn btn-primario" disabled>Deshabilitado</button>
+      </div>
+    </section>
+
+    <section>
+      <h2>3. Alertas</h2>
+      <div class="alerta alerta-info">ℹ️ <strong>Info:</strong> así se ve un mensaje informativo.</div>
+      <div class="alerta alerta-exito">✅ <strong>Éxito:</strong> la tarea se guardó correctamente.</div>
+      <div class="alerta alerta-aviso">⚠️ <strong>Aviso:</strong> revisa los datos antes de continuar.</div>
+      <div class="alerta alerta-peligro">⛔ <strong>Peligro:</strong> no se pudo completar la acción.</div>
+
+      <h2>Insignias</h2>
+      <div class="fila">
+        <span class="insignia insignia-nuevo">Nuevo</span>
+        <span class="insignia insignia-ok">Completado</span>
+        <span class="insignia insignia-alerta">Urgente</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>4. Estados</h2>
+
+      <h3>.cargando</h3>
+      <div class="cargando" role="status" aria-label="Cargando"></div>
+
+      <h3>.hecha</h3>
+      <p class="hecha">Terminar mi guía de estilos</p>
+
+      <h3>input.error + small.error</h3>
+      <div class="campo">
+        <label for="correo">Correo</label>
+        <input type="email" id="correo" class="error" value="correo-invalido">
+        <small class="error">Escribe un correo válido.</small>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis tareas</title>
+  <link rel="stylesheet" href="kit.css">
+</head>
+<body>
+
+  <header class="encabezado">
+    <h1>📋 Mi tablero</h1>
+    <form class="formulario">
+      <input type="text" placeholder="Escribe una tarea">
+      <button class="btn" aria-label="Agregar tarea">➕</button>
+    </form>
+  </header>
+
+  <div class="alerta oculto">⛔ Escribe una tarea antes de agregarla.</div>
+
+  <main class="tablero">
+
+    <section class="columna">
+      <h2>Por hacer (1)</h2>
+      <div class="tarjeta">
+        <label><input type="checkbox"> Estudiar quiz</label>
+        <span class="etiqueta alta">Alta</span>
+        <button class="btn" aria-label="Mover a en proceso">➡️</button>
+      </div>
+    </section>
+
+    <section class="columna">
+      <h2>En proceso (1)</h2>
+      <div class="tarjeta">
+        <label><input type="checkbox"> Crear prototipo</label>
+        <span class="etiqueta media">Media</span>
+        <div>
+          <button class="btn" aria-label="Mover a por hacer">⬅️</button>
+          <button class="btn" aria-label="Mover a listo">➡️</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="columna">
+      <h2>Listo (1)</h2>
+      <div class="tarjeta">
+        <label class="hecha"><input type="checkbox" checked> Reto</label>
+        <button class="btn btn-peligro" aria-label="Eliminar tarea">🗑️</button>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="barra-inferior">
+    <div>
+      <p>Progreso: 33% completado</p>
+      <div class="barra"><div style="width: 33%"></div></div>
+    </div>
+    <button class="btn" aria-label="Cambiar tema">🌙</button>
+  </footer>
+
+</body>
+</html>
