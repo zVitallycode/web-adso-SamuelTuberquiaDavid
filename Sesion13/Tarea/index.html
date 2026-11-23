@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#a3254f">
+
+  <title>¿Bootstrap o CSS propio? · Comparación de mis landings</title>
+  <meta name="description" content="Comparación entre mi landing de Dulce Brisa hecha con CSS propio (sesión 8) y la misma landing hecha con Bootstrap (sesión 13).">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-md bg-white shadow-sm sticky-top" aria-label="Principal">
+    <div class="container">
+      <a class="navbar-brand fw-semibold" href="#inicio">📊 Bootstrap o CSS propio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+              aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#lighthouse">Lighthouse</a></li>
+          <li class="nav-item"><a class="nav-link" href="#comparacion" role="button" data-bs-toggle="modal" data-bs-target="#comparacion">Comparación</a></li>
+          <li class="nav-item"><a class="nav-link" href="#conclusion">Conclusión</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <section class="py-5" id="inicio">
+      <div class="container pt-3 text-center">
+        <h1 class="display-5 fw-semibold">¿Bootstrap o CSS propio?</h1>
+        <p class="lead mx-auto">Hice la misma landing de Dulce Brisa dos veces: una con CSS propio en la sesión 8 y otra con Bootstrap en la sesión 13. Aquí comparo cómo me fue con cada una.</p>
+        <div class="d-flex flex-wrap justify-content-center gap-2">
+          <a class="btn btn-outline-primary" href="https://zvitallycode.github.io/web-adso-SamuelTuberquiaDavid/Sesion08/Reto/" target="_blank" rel="noopener">Ver landing de la sesión 8</a>
+          <a class="btn btn-outline-primary" href="https://zvitallycode.github.io/web-adso-SamuelTuberquiaDavid/Sesion13/Reto/" target="_blank" rel="noopener">Ver landing de la sesión 13</a>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#comparacion">Ver la comparación</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5" id="lighthouse">
+      <div class="container pt-3">
+        <h2 class="mb-4">Informes de Lighthouse</h2>
+        <div class="row g-4">
+          <div class="col-12 col-lg-6">
+            <figure class="card h-100 mb-0">
+              <img src="img/lighthouse-sesion08.webp" class="card-img-top" width="1200" height="750" loading="lazy"
+                   alt="Informe de Lighthouse de la landing de la sesión 8, hecha con CSS propio">
+              <figcaption class="card-body">
+                <h3 class="h5 card-title">Sesión 8 · CSS propio</h3>
+                <p class="card-text mb-0">Informe en modo móvil, en incógnito y sobre el enlace publicado.</p>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="col-12 col-lg-6">
+            <figure class="card h-100 mb-0">
+              <img src="img/lighthouse-sesion13.webp" class="card-img-top" width="1200" height="750" loading="lazy"
+                   alt="Informe de Lighthouse de la landing de la sesión 13, hecha con Bootstrap">
+              <figcaption class="card-body">
+                <h3 class="h5 card-title">Sesión 13 · Bootstrap</h3>
+                <p class="card-text mb-0">Informe en modo móvil, en incógnito y sobre el enlace publicado.</p>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5 bg-white" id="conclusion">
+      <div class="container pt-3">
+        <h2 class="mb-4">Conclusión</h2>
+        <div class="row">
+          <div class="col-12 col-lg-8">
+            <p class="fs-5">Para el proyecto final mi propuesta es <strong>usar nuestro propio kit de CSS</strong> y dejar Bootstrap solo para piezas puntuales, como el menú colapsable o la ventana modal.</p>
+            <ul>
+              <li class="mb-2">La rúbrica califica Flexbox, Grid, responsive desde 360 px, variables CSS y un kit de componentes. Con Bootstrap esas piezas las resuelve la librería y yo no tendría código propio que mostrar.</li>
+              <li class="mb-2">En la sustentación hay que explicar y cambiar código en vivo. Con mi CSS puedo explicar cada línea; con Bootstrap tendría que justificar clases que no escribí.</li>
+              <li class="mb-2">Bootstrap me ahorró trabajo: 56 líneas de CSS contra 165 y ninguna media query contra 3. Pero la página descarga unos 306 KB extra, frente a unos 4 KB de mi CSS.</li>
+              <li class="mb-2">Con Bootstrap la página se parece a muchas otras; con mi propio kit se ve única.</li>
+              <li>Aun así, Bootstrap es útil para hacer prototipos rápido y para componentes con JavaScript. Su modal cierra con Escape, algo que mi versión con <code>:target</code> no hace.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="py-3 text-center">
+    <p class="mb-0">Sesión 13 · Tarea</p>
+  </footer>
+
+  <div class="modal fade" id="comparacion" tabindex="-1" aria-labelledby="comparacion-titulo" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title h5" id="comparacion-titulo">Comparación: CSS propio vs. Bootstrap</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <div class="table-responsive">
+            <table class="table table-bordered align-middle mb-0">
+              <thead class="table-light">
+                <tr>
+                  <th scope="col">Criterio</th>
+                  <th scope="col">Sesión 8 · CSS propio</th>
+                  <th scope="col">Sesión 13 · Bootstrap</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Puntajes de Lighthouse (Rendimiento · Accesibilidad · Buenas prácticas · SEO)</th>
+                  <td class="table-warning">Pon aquí tus 4 puntajes</td>
+                  <td class="table-warning">Pon aquí tus 4 puntajes</td>
+                </tr>
+                <tr>
+                  <th scope="row">Líneas de CSS que escribí (sin comentarios ni líneas vacías)</th>
+                  <td>165</td>
+                  <td>56</td>
+                </tr>
+                <tr>
+                  <th scope="row">Peso de lo que descarga la página (CSS y JS, sin comprimir)</th>
+                  <td>3,8 KB de CSS</td>
+                  <td>1,5 KB de mi CSS + 306 KB de Bootstrap (227 KB de CSS y 79 KB de JS)</td>
+                </tr>
+                <tr>
+                  <th scope="row">Media queries que tuve que escribir</th>
+                  <td>3</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <th scope="row">Tiempo que me tomó</th>
+                  <td class="table-warning">Pon aquí tu tiempo</td>
+                  <td class="table-warning">Pon aquí tu tiempo</td>
+                </tr>
+                <tr>
+                  <th scope="row">Qué tan única se ve</th>
+                  <td>Muy única: colores, bordes y espacios los decidí yo.</td>
+                  <td>Se nota la estructura de Bootstrap (menú, tarjetas y botones), aunque con los colores de la marca.</td>
+                </tr>
+                <tr>
+                  <th scope="row">Qué tan fácil fue hacerla responsive</th>
+                  <td>Tuve que escribir 3 media queries y probar cada punto de quiebre.</td>
+                  <td>Con <code>col-12 col-md-6 col-lg-4</code> quedó responsive sin media queries propias.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
